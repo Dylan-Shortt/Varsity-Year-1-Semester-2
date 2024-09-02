@@ -6,6 +6,9 @@
 package ice.pkg2;
 //*************************************************//
 
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author dylan
@@ -31,22 +34,47 @@ public class ICE2 {
         //create an instance of the GUI class                
         chatWindow.setVisible(true);
         //*************************************************//
+        
         //*************************************************//
-        //setup for window
-        String usernameFromUser = commands.getUsername();
+        //set up for the user to use teh system
+        commands.setUp(chatWindow, chatbot);
         //*************************************************//
         
         //*************************************************//
-        chatWindow.setUsername("User: " + usernameFromUser);
-        //*************************************************//
-        //*************************************************//
-        //opening message
-        String message = commands.openingMessage(usernameFromUser);
-        chatWindow.setjTextArea_Chatbot(message);
-        //play voice
-        chatbot.textToSpeech(message); 
+        //enter first user input
+        String input = "";
+        String response = "";
+        while (!input.equalsIgnoreCase("exit"))
+        {
+            
+            //*************************************************//
+            //set user input window
+            input = JOptionPane.showInputDialog(null, "Please enter your message/request below: ");
+            chatWindow.setjTextPane1_user_text(input);
+            //*************************************************//
+            
+            //*************************************************//
+            response = commands.getResponse(chatWindow, chatbot, input);
+                    
+           
+            
+            String newResponse = commands.newResponse();
+            //*************************************************//
+            
+            //*************************************************//
+            //print AI response and speak response
+            chatWindow.setjTextArea_Chatbot(response);
+            //speak response
+            chatbot.textToSpeech(newResponse);     
+            //*************************************************//
+            
+            
+        }
         //*************************************************//
         
+        //*************************************************//
+        //once the user selects exit
+        commands.exitCommand(chatWindow, chatbot);
         //*************************************************//
         
     }

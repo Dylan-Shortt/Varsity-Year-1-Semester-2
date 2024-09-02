@@ -5,7 +5,6 @@
 package ice.pkg2;
 
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
@@ -156,7 +155,13 @@ public class Chatbot_Window extends javax.swing.JFrame {
         jTextArea_Chatbot.setText(text);
     }
     //*************************************************//
+    
+    //*************************************************//
     public JTextPane getjTextPane1_user_text() {
         return jTextPane1_user_text;
     }
+    public void setjTextPane1_user_text(String text) {
+        jTextPane1_user_text.setText(text);
+    }
+    //*************************************************//
 }

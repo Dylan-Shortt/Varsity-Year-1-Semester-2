@@ -36,8 +36,8 @@ public class TextToSpeechChatbot {
         voice.allocate();
         
         // Set parameters to approximate TTS
-        voice.setRate(200);  // Moderate to fast speech rate
-        voice.setPitch(100); // Neutral pitch
+        voice.setRate(175);  // Moderate to fast speech rate
+        voice.setPitch(120); // Neutral pitch
         voice.setVolume(2);  // Medium volume
         
         voice.speak(text);
