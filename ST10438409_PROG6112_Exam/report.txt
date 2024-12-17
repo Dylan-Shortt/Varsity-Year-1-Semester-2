@@ -1,0 +1,7 @@
+MOVIE TICKET REPORT
+*************************************************
+MOVIE NAME: Napoleon
+MOVIE TICKET PRICE: R 100.0
+NUMBER OF TICKETS: 3
+TOTAL TICKET PRICE: R 342.0
+*************************************************
