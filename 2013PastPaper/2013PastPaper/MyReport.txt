@@ -1,0 +1,8 @@
+Bongani
+
+Mark 1: 57
+Mark 2: 66
+Mark 3: 74
+
+Highest Mark: 74
+Average Mark: 66
